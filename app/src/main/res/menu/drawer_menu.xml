@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_person"
+            android:title="@string/home_nav" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="@string/profile_nav" />
+
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_pie_chart"
+            android:title="@string/statistics_nav" />
+
+        <item
+            android:id="@+id/nav_newData"
+            android:icon="@drawable/ic_add_circle"
+            android:title="@string/newData_nav" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings_nav" />
+    </group>
+
+</menu>

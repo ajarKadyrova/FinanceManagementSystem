@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Finance Management System</string>
+    <string name="greet_textview">Добро пожаловать!</string>
+    <string name="sign_in_btn">Войти</string>
+    <string name="login_text">Логин</string>
+    <string name="password_text">Пароль</string>
+
+    <string name="date">Дата</string>
+    <string name="account">Счет</string>
+    <string name="category">Категория</string>
+    <string name="sum">Сумма</string>
+    <string name="contragent">Контрагент</string>
+    <string name="project">Проект</string>
+    <string name="description">Описание</string>
+    <string name="note">Заметка</string>
+    <string name="hintSum">2000с</string>
+    <string name="accountfrom">Откуда</string>
+    <string name="accountto">Куда</string>
+
+    <string name="transactions">Транзакции</string>
+    <string name="example_mainScreen">Аренда за офис</string>
+    <string name="example_main_source">Общий бюджет</string>
+    <string name="example_main_sum">-14,500</string>
+    <string name="profile_nav">Мой Профиль</string>
+    <string name="home_nav">Главный Экран</string>
+    <string name="newData_nav">Добавить новые данные</string>
+    <string name="statistics_nav">Статистика</string>
+    <string name="settings_nav">Настройки</string>
+    <string name="full">Общий</string>
+    <string name="incomes">Доходы</string>
+    <string name="expenses">Расходы</string>
+    <string name="transfer">Перевод</string>
+
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+    <string name="save_btn">Сохранить</string>
+    <string name="no_records">Данных нет</string>
+
+    <string name="selectAccount">Выбрать счет</string>
+    <string name="selectProject">Выбрать проект</string>
+    <string name="selectCounterPartner">Выбрать бухгалтера</string>
+    <string name="mistake">Произошла ошибка загрузки данных</string>
+    <string name="alertMessage_sum">Введите сумму</string>
+    <string name="alertMessage_date">Введите дату</string>
+    <string name="alertMessage_account">Выберите счет</string>
+    <string name="error">Произошла ошибка</string>
+    <string name="saved_data">Данные сохранены</string>
+</resources>
