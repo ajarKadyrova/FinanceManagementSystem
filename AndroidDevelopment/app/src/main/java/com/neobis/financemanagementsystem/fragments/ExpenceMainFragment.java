@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,19 +91,23 @@ public class ExpenceMainFragment extends Fragment {
     }
 
     private void getExpences() {
-        final Call<List<Expences>> departments = jsonPlaceHolderApi.getExpences();
-        departments.enqueue(new Callback<List<Expences>>() {
+        final Call<List<Expences>> expencesCall = jsonPlaceHolderApi.getExpences();
+        expencesCall.enqueue(new Callback<List<Expences>>() {
             @Override
             public void onResponse(Call<List<Expences>> call, Response<List<Expences>> response) {
                 if (!response.isSuccessful()) {
                     textView.setText("Code:" + response.code());
                     return;
                 }
-                if (expences != null) {
+                expences = response.body();
+                if (recyclerView != null) {
                     adapter = new ExpenseAdapter(getContext(), expences);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+                    recyclerView.setLayoutManager(layoutManager);
                     recyclerView.setAdapter(adapter);
-                    textView.setVisibility(View.GONE);
+                    textView.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
+                    Log.v("EMF", "Data:" + expences);
                 }
                 else textView.setVisibility(View.VISIBLE);
                     adapter.clear();

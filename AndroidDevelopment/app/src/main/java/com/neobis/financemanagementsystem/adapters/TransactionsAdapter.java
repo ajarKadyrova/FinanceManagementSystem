@@ -36,13 +36,18 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
     @Override
     public void onBindViewHolder(@NonNull TransactionsAdapter.ViewHolder holder, int position) {
         Transactions currentTransactions = mTransactions.get(position);
-        holder.description.setText(currentTransactions.getComment());
         if(currentTransactions.getCategoryExpense() !=null) {
-            holder.budget.setText(String.valueOf(currentTransactions.getCategoryExpense()));
+            holder.description.setText(currentTransactions.getCategoryExpense());
+            if(currentTransactions.getCounterParty() != null) {
+                holder.budget.setText(String.valueOf(currentTransactions.getCounterParty()));
+            }else holder.budget.setText("-");
             holder.sum.setText(String.valueOf(currentTransactions.getAmount()));
             holder.sum.setTextColor(Color.parseColor("#e60000"));
         } else if (currentTransactions.getCategoryIncome() !=null){
-            holder.budget.setText(String.valueOf(currentTransactions.getCategoryIncome()));
+            holder.description.setText(currentTransactions.getCategoryIncome());
+            if(currentTransactions.getCounterParty() != null) {
+                holder.budget.setText(String.valueOf(currentTransactions.getCounterParty()));
+            }else holder.budget.setText("-");
             holder.sum.setText(String.valueOf(currentTransactions.getAmount()));
             holder.sum.setTextColor(Color.parseColor("#248F24"));
         } else holder.budget.setText("-");

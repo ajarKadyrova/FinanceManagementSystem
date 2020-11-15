@@ -94,7 +94,7 @@ public class TransferFragment extends Fragment implements DatePickerDialog.OnDat
                 accounts = response.body();
                 List account = new ArrayList<>();
                 account.add(getResources().getString(R.string.selectAccount));
-                for (int i = 1; i < accounts.size(); i++) {
+                for (int i = 0; i < accounts.size(); i++) {
                     account.add(accounts.get(i).getType());
                 }
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, account);

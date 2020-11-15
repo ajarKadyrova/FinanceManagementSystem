@@ -6,6 +6,7 @@ import com.neobis.financemanagementsystem.model.CounterPartner;
 import com.neobis.financemanagementsystem.model.Departments;
 import com.neobis.financemanagementsystem.model.Expences;
 import com.neobis.financemanagementsystem.model.Incomes;
+import com.neobis.financemanagementsystem.model.PostIncome;
 import com.neobis.financemanagementsystem.model.Projects;
 import com.neobis.financemanagementsystem.model.Transactions;
 
@@ -43,7 +44,7 @@ public interface JsonPlaceHolderApi {
     Call<List<CategoryOfIncome>>getCategory();
 
     @POST("api/income/")
-    Call<Incomes> createIncome(@Body Incomes incomes);
+    Call<PostIncome> createIncome(@Body PostIncome incomes);
 
     @POST("api/neobis/")
     Call<Departments> createDepartment(@Body Departments department);

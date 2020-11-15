@@ -1,6 +1,5 @@
 package com.neobis.financemanagementsystem.adapters;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -21,8 +20,8 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ViewHold
     private Context mContext;
 
     public ExpenseAdapter(Context context, List<Expences> items){
-        this.mExpences = items;
         this.mContext = context;
+        this.mExpences = items;
     }
 
     @NonNull
@@ -35,9 +34,9 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ExpenseAdapter.ViewHolder holder, int position) {
         Expences currentExpence = mExpences.get(position);
-        holder.description.setText(currentExpence.getComment());
-        if(currentExpence.getCategoryExpence() !=null) {
-            holder.budget.setText(String.valueOf(currentExpence.getCategoryExpence()));
+        holder.description.setText(currentExpence.getCategoryExpence());
+        if(currentExpence.getCounterparty() !=null) {
+            holder.budget.setText(String.valueOf(currentExpence.getCounterparty()));
         } else holder.budget.setText("-");
         holder.sum.setText(String.valueOf(currentExpence.getAmount()));
         holder.sum.setTextColor(Color.parseColor("#e60000"));

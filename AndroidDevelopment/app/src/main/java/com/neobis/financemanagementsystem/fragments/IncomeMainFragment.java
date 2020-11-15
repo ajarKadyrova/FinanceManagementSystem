@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -91,8 +92,8 @@ public class IncomeMainFragment extends Fragment {
     }
 
     private void getIncomes() {
-        final Call<List<Incomes>> departments = jsonPlaceHolderApi.getIncomes();
-        departments.enqueue(new Callback<List<Incomes>>() {
+        final Call<List<Incomes>> incomesCall = jsonPlaceHolderApi.getIncomes();
+        incomesCall.enqueue(new Callback<List<Incomes>>() {
             @Override
             public void onResponse(Call<List<Incomes>> call, Response<List<Incomes>> response) {
                 if (!response.isSuccessful()) {
@@ -100,14 +101,6 @@ public class IncomeMainFragment extends Fragment {
                     return;
                 }
                 incomes = response.body();
-//                for(Incomes department: incomes){
-//                    String content ="";
-//                    content+= "\n" + department.getDate() + "\n";
-//                    content+="Dep" + department.getComment()+ "\n";
-//                    content+= department.getCategoryincome()+ "\n";
-//                    content+=department.getAmount()+ "\n";
-//                    textView.append(content);
-//                }
                 if (incomes != null) {
                     adapter = new IncomeAdapter(getContext(), incomes);
                     recyclerView.setAdapter(adapter);

@@ -87,6 +87,7 @@ public class NewDataActivity extends AppCompatActivity {
                 content += "\n" + departmentResponse.getDepName() + "\n";
                 textView.append(content);
                 department_et.setText("");
+                Toast.makeText(getApplicationContext(), "Data is added", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -113,6 +114,7 @@ public class NewDataActivity extends AppCompatActivity {
                 content += "\n" + projectResponse.getName() + "\n";
                 textView.append(content);
                 counter_et.setText("");
+                Toast.makeText(getApplicationContext(), "Data is added", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -139,6 +141,7 @@ public class NewDataActivity extends AppCompatActivity {
                 content += "\n" + projectResponse.getName() + "\n";
                 textView.append(content);
                 project_et.setText("");
+                Toast.makeText(getApplicationContext(), "Data is added", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -165,6 +168,7 @@ public class NewDataActivity extends AppCompatActivity {
                 content += "\n" + accountResponse.getType() + "\n";
                 textView.append(content);
                 bankAccount_et.setText("");
+                Toast.makeText(getApplicationContext(), "Data is added", Toast.LENGTH_SHORT).show();
             }
 
             @Override

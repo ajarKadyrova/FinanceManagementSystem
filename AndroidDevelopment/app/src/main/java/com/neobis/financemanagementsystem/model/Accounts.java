@@ -15,12 +15,6 @@ public class Accounts {
         this.type = type;
     }
 
-    public Accounts(Long id, String type, Long amount) {
-        this.id = id;
-        this.type = type;
-        this.amount = amount;
-    }
-
     public Long getId() {
         return id;
     }

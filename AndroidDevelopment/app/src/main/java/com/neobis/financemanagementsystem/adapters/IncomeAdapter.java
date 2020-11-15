@@ -35,9 +35,9 @@ public class IncomeAdapter extends RecyclerView.Adapter<IncomeAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull IncomeAdapter.ViewHolder holder, int position) {
         Incomes currentIncome = mIncomes.get(position);
-        holder.description.setText(currentIncome.getComment());
-        if(currentIncome.getCategoryIncome() !=null) {
-            holder.budget.setText(String.valueOf(currentIncome.getCategoryIncome()));
+        holder.description.setText(currentIncome.getCategoryIncome());
+        if(currentIncome.getCounterparty() != null) {
+            holder.budget.setText(String.valueOf(currentIncome.getCounterparty()));
         } else holder.budget.setText("-");
         holder.sum.setText(String.valueOf(currentIncome.getAmount()));
         holder.sum.setTextColor(Color.parseColor("#248F24"));
