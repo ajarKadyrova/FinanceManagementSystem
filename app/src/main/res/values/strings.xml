@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Finance Management System</string>
+    <string name="greet_textview">Добро пожаловать!</string>
+    <string name="sign_in_btn">Войти</string>
+    <string name="login_text">Логин</string>
+    <string name="password_text">Пароль</string>
+
+    <string name="date">Дата</string>
+    <string name="account">Счет</string>
+    <string name="category">Категория</string>
+    <string name="sum">Сумма</string>
+    <string name="contragent">Контрагент</string>
+    <string name="project">Проект</string>
+    <string name="description">Описание</string>
+    <string name="note">Заметка</string>
+    <string name="hintSum">2000с</string>
+    <string name="accountfrom">Откуда</string>
+    <string name="accountto">Куда</string>
+    <string name="date_from">От</string>
+    <string name="date_to">До</string>
+
+    <string name="transactions">Транзакции</string>
+    <string name="example_mainScreen">Аренда за офис</string>
+    <string name="example_main_source">Общий бюджет</string>
+    <string name="example_main_sum">-14,500</string>
+    <string name="profile_nav">Мой Профиль</string>
+    <string name="home_nav">Главный Экран</string>
+    <string name="newData_nav">Добавить новые данные</string>
+    <string name="statistics_nav">Статистика</string>
+    <string name="settings_nav">Настройки</string>
+    <string name="full">Все</string>
+    <string name="incomes">Доходы</string>
+    <string name="expenses">Расходы</string>
+    <string name="transfer">Перевод</string>
+
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+    <string name="save_btn">Добавить</string>
+    <string name="filter_btn">Применить</string>
+    <string name="no_records">Данных нет</string>
+
+    <string name="selectProject">Без проекта</string>
+    <string name="selectCounterPartner">Выбрать бухгалтера</string>
+    <string name="mistake">Произошла ошибка загрузки данных</string>
+    <string name="alertMessage_sum">Введите сумму</string>
+    <string name="alertMessage_date">Введите дату</string>
+    <string name="alertMessage_account">Выберите счет</string>
+    <string name="alertMessage_categry">Выберите категорию дохода</string>
+    <string name="error">Произошла ошибка</string>
+    <string name="saved_data">Данные сохранены</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tags">Теги</string>
+    <string name="add_new_settings">Добавить новый</string>
+    <string name="transaction_type">Тип транзакции</string>
+    <string name="fms">Finance Management \nSystem</string>
+    <string name="pasword_forgot">Забыли пароль?</string>
+    <string name="reset_password">Сбросить пароль</string>
+    <string name="reset_password_description">Введите свой email, чтобы сбросить пароль</string>
+    <string name="auth">Авторизоваться</string>
+    <string name="login_no">Введите логин</string>
+    <string name="password_no">Введите пароль</string>
+    <string name="wrong_login">Неправильно введены логин или пароль</string>
+    <string name="same_accounts">Выберите разные аккаунты</string>
+    <string name="wrong_email">Неправильно введена почта или такой не существует</string>
+
+    <string-array name="transactions_type">
+        <item>Все транзакции</item>
+        <item>Доходы</item>
+        <item>Расходы</item>
+        <item>Переводы</item>
+    </string-array>
+</resources>

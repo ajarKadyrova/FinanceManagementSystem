@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BalancesFragment"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incomes"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:paddingBottom="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/text_income"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:id="@+id/tv_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/text_income"
+        android:textColor="@color/green"
+        tools:text="1452"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expenses"
+        android:layout_below="@id/text_income"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/text_expense"
+        android:layout_below="@id/text_income"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        tools:text="4520"
+        android:paddingTop="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/text_expense"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:id="@+id/text_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full"
+        android:layout_below="@id/text_expense"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="18dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/text_total"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/text_total"
+        android:layout_below="@id/text_expense"
+        android:textColor="@color/main_grey"
+        tools:text="78521"
+        android:paddingTop="16dp"/>
+
+    <LinearLayout
+        android:layout_below="@id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/acco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/text_total"
+        android:layout_below="@id/text_expense"
+        android:text="Аккаунты:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"/>
+
+        <TextView
+            android:id="@+id/accou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/text_total"
+            android:layout_below="@id/text_expense"
+            android:text="Элсом"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"/>
+
+        <TextView
+            android:id="@+id/accoun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/text_total"
+            android:layout_below="@id/text_expense"
+            android:text="КИСБ"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"/>
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/text_total"
+            android:layout_below="@id/text_expense"
+            android:text="Optima"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_balances"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        tools:listitem="@layout/list_view_balances"/>
+
+</RelativeLayout>

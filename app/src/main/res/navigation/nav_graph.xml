@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.neobis.financemanagementsystem.fragments.WrapTransactionsFragment"
+        android:label="WrapTransactionsFragment" >
+        <argument
+            android:name="token"
+            app:argType="string"
+            android:defaultValue="0"/>
+    </fragment>
+    <fragment
+        android:id="@+id/balancesFragment"
+        android:name="com.neobis.financemanagementsystem.fragments.BalancesFragment"
+        android:label="BalancesFragment" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.neobis.financemanagementsystem.fragments.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" >
+        <action
+            android:id="@+id/action_statisticsFragment_to_statisticsFragment22"
+            app:destination="@id/statisticsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.neobis.financemanagementsystem.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsFragment2"
+            app:destination="@id/settingsFragment2" />
+        <action
+            android:id="@+id/action_settingsFragment_to_newDataFragment"
+            app:destination="@id/newDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.neobis.financemanagementsystem.fragments.SettingsFragment2"
+        android:label="SettingsFragment2" >
+        <action
+            android:id="@+id/action_settingsFragment2_to_newDataFragment"
+            app:destination="@id/newDataFragment" />
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_settingsFragment2_to_newDataFragment2"
+            app:destination="@id/newDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDataFragment"
+        android:name="com.neobis.financemanagementsystem.fragments.NewDataFragment"
+        android:label="NewDataFragment" />
+    <fragment
+        android:id="@+id/statisticsFragment2"
+        android:name="com.neobis.financemanagementsystem.fragments.StatisticsFragment2"
+        android:label="StatisticsFragment2" />
+</navigation>
